@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,7 @@ public class Item {
     @JoinColumn(name = "fornecedor_id")
     private Fornecedor fornecedor;
     
-    @OneToOne(optional = true, mappedBy = "item") 
-    private ItensCompra compra; // Opcional: Pode ou não já ter sido vendido
+    @ManyToOne
+    @JoinColumn(name = "itens_id")
+    private Compra compra; // Opcional: Pode ou não já ter sido vendido
 }

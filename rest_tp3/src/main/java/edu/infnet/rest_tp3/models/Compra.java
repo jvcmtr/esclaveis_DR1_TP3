@@ -38,5 +38,5 @@ public class Compra {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "compra")
-    private List<ItensCompra> itens = new ArrayList<>();
+    private List<Item> itens = new ArrayList<>();
 }

@@ -26,7 +26,7 @@ public class Funcionario {
     private Double salario;
     private String nome;
     private String CTPS;
-    private String CNPF;
+    private String documento;
 
     @OneToMany(mappedBy = "vendedor")
     public List<Compra> vendas = new ArrayList<>();

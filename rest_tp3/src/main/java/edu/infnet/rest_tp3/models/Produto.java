@@ -5,10 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 public class Produto {
 
@@ -17,8 +19,8 @@ public class Produto {
     private Long id;
     
     private String nome;
-    private Double preco_compra;
-    private Double preco_venda;
+    private Double precoCompra;
+    private Double precoVenda;
     private Boolean refrigerado;
     private String setor;
 }
